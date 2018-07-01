@@ -8,6 +8,6 @@ Template.afObjectField_bootstrap4.helpers({
     return _.pick(this, 'name', 'id-prefix');
   },
   panelClass: function() {
-    return this.panelClass || 'panel-default';
+    return this.panelClass || '';
   }
 });

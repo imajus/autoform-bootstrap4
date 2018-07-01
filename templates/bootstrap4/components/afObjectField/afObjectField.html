@@ -1,13 +1,11 @@
 <template name="afObjectField_bootstrap4">
-  <div class="panel {{panelClass}}">
+  <div class="card {{panelClass}}">
     {{#with afFieldLabelText name=this.name}}
-    <div class="panel-heading {{headingClass}}">
-      <h3 class="panel-title">{{this}}</h3>
-    </div>
+      <h3 class="card-header {{headingClass}}">{{this}}</h3>
     {{/with}}
-    <div class="panel-body {{bodyClass}}">
+    <div class="card-body {{bodyClass}}">
       {{#if afFieldIsInvalid name=this.name}}
-      <span class="help-block">{{{afFieldMessage name=this.name}}}</span>
+        <span class="text-danger">{{{afFieldMessage name=this.name}}}</span>
       {{/if}}
       {{> afQuickFields quickFieldsAtts}}
     </div>
