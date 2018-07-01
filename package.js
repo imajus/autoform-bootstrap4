@@ -12,7 +12,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.7.0.3');
-  api.use(['underscore', 'ecmascript', 'templating', 'aldeed:autoform@6.0.0', 'aldeed:template-extension@4.0.0']);
+  api.use('ecmascript');
+  api.use(['underscore', 'templating', 'aldeed:autoform@6.0.0', 'aldeed:template-extension@4.0.0'], 'client');
   api.mainModule('autoform-bootstrap4.js', 'client');
 });
 
