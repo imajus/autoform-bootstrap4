@@ -1,8 +1,9 @@
 <template name="afCheckbox_bootstrap4">
-  <div class="checkbox">
-    <label>
-      <input type="checkbox" value="true" {{atts}} />
+  <div class="form-check">
+    <input type="checkbox" value="true" {{atts}}>
+    <label class="form-check-label" for="{{atts.id}}">
       {{afFieldLabelText name=this.name}}
     </label>
+    <div class="invalid-feedback">{{{afFieldMessage name=this.name}}}</div>
   </div>
 </template>

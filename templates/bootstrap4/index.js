@@ -5,7 +5,7 @@ import './components/afObjectField/afObjectField.js';
 import './components/quickForm/quickForm.js';
 
 // Input types
-import './inputTypes/boolean-checkbox/boolean-checkbox.html';
+import './inputTypes/boolean-checkbox/boolean-checkbox.js';
 import './inputTypes/boolean-radios/boolean-radios.js';
 import './inputTypes/boolean-select/boolean-select.html';
 import './inputTypes/button/button.html';
