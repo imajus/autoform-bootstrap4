@@ -1,5 +1,5 @@
 <template name="afObjectField_bootstrap4">
-  <div class="card {{panelClass}}">
+  <div class="card {{or cardClass ''}} mb-3">
     {{#with afFieldLabelText name=this.name}}
       <h3 class="card-header {{headingClass}}">{{this}}</h3>
     {{/with}}
