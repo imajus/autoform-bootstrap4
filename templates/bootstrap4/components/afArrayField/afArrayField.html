@@ -1,18 +1,18 @@
 <template name="afArrayField_bootstrap4">
-  <div class="panel {{panelClass}}">
-    <div class="panel-heading {{headingClass}}">{{afFieldLabelText name=this.atts.name}}</div>
-    {{#if afFieldIsInvalid name=this.atts.name}}
-    <div class="panel-body has-error">
-      <span class="help-block">{{{afFieldMessage name=this.atts.name}}}</span>
-    </div>
-    {{/if}}
-    <ul class="list-group">
+  <div class="card {{#if afFieldIsInvalid name=this.name}}border-danger{{/if}} {{cardClass}} mb-3">
+    {{#with afFieldLabelText name=this.atts.name}}
+      <div class="card-header {{headingClass}}">{{this}}</div>
+    {{/with}}
+    <ul class="list-group {{listGroupClass}}">
+      {{#if afFieldIsInvalid name=this.atts.name}}
+        <li class="list-group-item autoform-array-item"><span class="text-danger small">afFieldMessage name=this.name</span></li>
+      {{/if}}
       {{#afEachArrayItem name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
       <li class="list-group-item autoform-array-item">
         <div>
           <div class="autoform-remove-item-wrap">
             {{#if afArrayFieldHasMoreThanMinimum name=../atts.name minCount=../atts.minCount maxCount=../atts.maxCount}}
-            <button type="button" class="btn btn-primary autoform-remove-item"><span class="glyphicon glyphicon-minus"></span></button>
+            <button type="button" class="btn btn-primary autoform-remove-item">{{>i fa='minus'}}</button>
             {{/if}}
           </div>
           <div class="autoform-array-item-body">
@@ -23,7 +23,7 @@
       {{/afEachArrayItem}}
       {{#if afArrayFieldHasLessThanMaximum name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
       <li class="list-group-item">
-        <button type="button" class="btn btn-primary autoform-add-item" data-autoform-field="{{this.atts.name}}" data-autoform-minCount="{{this.atts.minCount}}" data-autoform-maxCount="{{this.atts.maxCount}}"><span class="glyphicon glyphicon-plus"></span></button>
+        <button type="button" class="btn btn-primary autoform-add-item" data-autoform-field="{{this.atts.name}}" data-autoform-minCount="{{this.atts.minCount}}" data-autoform-maxCount="{{this.atts.maxCount}}">{{>i fa='plus'}}</button>
       </li>
       {{/if}}
     </ul>

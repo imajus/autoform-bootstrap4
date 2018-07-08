@@ -1,10 +1,14 @@
 <template name="afRadioGroupInline_bootstrap4">
   <div class="af-radio-group" {{dsk}}>
     {{#each this.items}}
-    <label class="radio-inline fix-indent">
-      <input type="radio" value="{{this.value}}" {{atts}} />
-      {{this.label}}
-    </label>
+      <div class="form-check form-check-inline">
+        <input type="radio" value="{{this.value}}" {{atts}}>
+        <label class="form-check-label">{{this.label}}</label>
+      </div>
     {{/each}}
+    {{#if afFieldIsInvalid name=this.name}}
+      <input type="hidden" class="form-control is-invalid">
+      <div class="invalid-feedback">{{{afFieldMessage name=this.name}}}</div>
+    {{/if}}
   </div>
 </template>

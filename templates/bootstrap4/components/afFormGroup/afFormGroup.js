@@ -10,7 +10,8 @@ Template.afFormGroup_bootstrap4.helpers({
     const ctx = AutoForm.getValidationContext();
     const atts = _.clone(this.afFieldInputAtts);
     if ( ctx.keyIsInvalid(this.name) ) {
-      atts.class = (atts.class || '') + ' is-invalid';
+      atts.class = atts.class || '';
+      atts.class += ' is-invalid';
     }
     return atts;
   }
