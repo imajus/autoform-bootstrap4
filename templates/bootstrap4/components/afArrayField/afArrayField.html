@@ -5,7 +5,7 @@
     {{/with}}
     <ul class="list-group {{listGroupClass}}">
       {{#if afFieldIsInvalid name=this.atts.name}}
-        <li class="list-group-item autoform-array-item"><span class="text-danger small">afFieldMessage name=this.name</span></li>
+        <li class="list-group-item autoform-array-item"><span class="text-danger small">{{{afFieldMessage name=this.atts.name}}}</span></li>
       {{/if}}
       {{#afEachArrayItem name=this.atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
       <li class="list-group-item autoform-array-item">
