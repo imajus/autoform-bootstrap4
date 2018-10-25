@@ -12,8 +12,8 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.7.0.3');
-  api.use('ecmascript');
-  api.use(['underscore', 'templating', 'aldeed:autoform@6.0.0', 'aldeed:template-extension@4.0.0', 'imajus:common-helpers@0.0.2', 'imajus:bootstrap-helpers@0.0.7'], 'client');
+  api.use('ecmascript@0.12.1');
+  api.use(['underscore@1.0.10', 'templating@1.3.2', 'aldeed:autoform@6.0.0', 'aldeed:template-extension@4.0.0', 'imajus:common-helpers@0.0.2', 'imajus:bootstrap-helpers@0.0.7'], 'client');
   api.mainModule('autoform-bootstrap4.js', 'client');
 });
 
