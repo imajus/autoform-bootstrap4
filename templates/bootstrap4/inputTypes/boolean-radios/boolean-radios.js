@@ -13,6 +13,9 @@ Template.afBooleanRadioGroup_bootstrap4.helpers({
     atts.class += ' form-check-input';
     return atts;
   },
+  falseLabel() {
+    return this.atts.falseLabel || 'False';
+  },
   trueAtts() {
     const atts = _.omit(this.atts, 'trueLabel', 'falseLabel', 'nullLabel', 'data-schema-key');
     if ( this.value === true ) {
@@ -21,6 +24,9 @@ Template.afBooleanRadioGroup_bootstrap4.helpers({
     atts.class = atts.class || '';
     atts.class += ' form-check-input';
     return atts;
+  },
+  trueLabel() {
+    return this.atts.trueLabel || 'False';
   },
   nullAtts() {
     const atts = _.omit(this.atts, 'trueLabel', 'falseLabel', 'nullLabel', 'data-schema-key');

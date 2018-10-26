@@ -2,11 +2,11 @@
   <div {{dsk}}>
     <div class="form-check form-check-inline">
       <input type="radio" value="false" name="{{this.name}}" {{falseAtts}}>
-      <label class="form-check-label">{{or this.atts.falseLabel 'False'}}</label>
+      <label class="form-check-label">{{falseLabel}}</label>
     </div>
     <div class="form-check form-check-inline">
       <input type="radio" value="true" name="{{this.name}}" {{trueAtts}}>
-      <label class="form-check-label">{{or this.atts.trueLabel 'True'}}</label>
+      <label class="form-check-label">{{trueLabel}}</label>
     </div>
     {{#if this.atts.nullLabel}}
       <div class="form-check form-check-inline">
