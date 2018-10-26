@@ -27,10 +27,7 @@ geojson-utils@1.0.10
 html-tools@1.0.11
 htmljs@1.0.11
 id-map@1.1.0
-imajus:autoform-bootstrap4@0.0.2
-imajus:bootstrap-helpers@0.0.8
-imajus:common-helpers@0.0.2
-imajus:helpers-core@0.0.2
+imajus:autoform-bootstrap4@0.0.3
 inter-process-messaging@0.1.0
 jquery@1.11.11
 livedata@1.0.18
