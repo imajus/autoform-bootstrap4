@@ -1,6 +1,6 @@
 Package.describe({
   name: 'imajus:autoform-bootstrap4',
-  version: '0.0.4',
+  version: '0.0.5',
   // Brief, one-line summary of the package.
   summary: 'Bootstrap 4 templates for Meteor AutoForm',
   // URL to the Git repository containing the source code for this package.
